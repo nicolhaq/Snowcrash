@@ -1,0 +1,21 @@
+cat /var/mail/level05
+
+you get crontable
+*/2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05
+
+it execute :
+#!/bin/sh
+
+for i in /opt/openarenaserver/* ; do
+	(ulimit -t 5; bash -x "$i")
+		rm -f "$i"
+		done
+
+this scrip execute a scipt from /opt/openarenasever/
+
+create a scpipt in that directory and  write 
+getflag > tmp/flag
+
+chmod +x your script
+
+wait 2 min and cat /tmp/flag

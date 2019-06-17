@@ -1,0 +1,13 @@
+get level02.pcap with scp.
+upload level02.pcap to cloudshark.io.
+use analisysis follow stream with ascii option.
+(if it fail chmod  the file right.)
+
+Password:
+ft_wandr...NDRel.L0L
+clean the password of del char
+Each point (.) correspond to a delete caracter.
+delete: ...NDR.
+
+????
+profit

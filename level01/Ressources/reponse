@@ -1,0 +1,12 @@
+find the file passwd in /etc/
+scp the file on your machine:
+scp -P 4242 level01@[IP]:/etc/passwd
+
+use john the reaper (install it if you do not have it: https://www.openwall.com/john/doc/)
+to crack the encryted pasword:
+john passwd
+john --show passwd
+
+
+????
+profit

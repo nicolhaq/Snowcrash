@@ -1,0 +1,3 @@
+find / -user "flag00"
+decode john with rot 15
+code:nottoohardhere

