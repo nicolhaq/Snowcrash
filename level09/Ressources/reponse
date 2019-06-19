@@ -1,0 +1,15 @@
+In your home, you have level09 and a token
+
+When you execute level09 binary with aaaaa in argument, output is :
+
+abcde
+
+The binary level09 perform a ciphering by shift of n + 1 by character read.
+We can create a program that cancels this encryption (see main.c)
+
+scp main.c level09@[IP]:/tmp
+
+cd /tmp && gcc main.c -o decript
+
+Get the token :
+./decript ~/token

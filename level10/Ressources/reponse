@@ -1,0 +1,34 @@
+In your home, you have level10 and a token
+
+nm level10
+
+We can see that access function is used
+
+In man access we have a Note :
+
+Warning: Using access() to check if a user is authorized to, for example, open a file before actually doing so using open(2) creates a security hole, because the user might exploit the short time interval between checking and opening the file to manipulate it. For this reason, the use of this system call should be avoided. (In the example just described, a safer alternative would be to temporarily switch the process's effective user ID to the real ID and then call open(2).)
+
+Race condition exploit spoted
+
+Create  2 scripts (see Ressources)
+
+Run these 2 scripts while listening 6969 with nc -l 6969
+
+.*( )*.
+.*( )*.
+.*( )*.
+.*( )*.
+.*( )*.
+.*( )*.
+woupa2yuojeeaaed06riuj63c
+.*( )*.
+woupa2yuojeeaaed06riuj63c
+.*( )*.
+woupa2yuojeeaaed06riuj63c
+.*( )*.
+woupa2yuojeeaaed06riuj63c
+.*( )*.
+.*( )*.
+Get the token :
+
+woupa2yuojeeaaed06riuj63c
