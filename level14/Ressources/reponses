@@ -1,0 +1,48 @@
+Nothing at home...
+
+try getflag
+
+Nope there is no token here for you sorry. Try again :)
+
+try gdb /bin/getflag
+run
+
+You should not reverse this
+
+Ok, the programme check if it launch with a debugger, probably with ptrace
+
+In gdb, set a breakpoint in main with b main
+run
+show asm code with layout asm
+
+0x8048989 <main+67> call 0x8048540 ptrace@plt
+0x804898e <main+72> test %eax,%eax
+0x8048990 <main+74> jns 0x80489a8 <main+98>
+
+Bingo !
+
+set a breakpoint to the next instruction: b *0x804898e
+
+change the return of ptrace with set var $eax=1 continue
+
+Nope there is no token here for you sorry. Try again :)
+
+Ok now the programme check if we have the good right, probbly with getuid
+
+Get the uid of flag14 with id -u flag14
+
+3014
+
+Follow the next of the code until getuid and found this:
+
+0x8048b06 <main+448> mov 0x18(%esp),%eax
+0x8048b0a <main+452> cmp $0xbbe,%eax
+
+Change a breakpoint at 0x8048b0a with b *0x8048b0a continue
+
+Change the return of getuid with set var $eax=3014
+
+continue
+
+Check flag.Here is your token : 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ
+

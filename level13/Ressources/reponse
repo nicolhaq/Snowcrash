@@ -1,0 +1,32 @@
+In your home, you have level13
+
+./level13
+
+UID 2013 started us but we we expect 4242
+
+gdb level13
+
+(gdb) layout asm
+
+0x8048595 <main+9>              call   0x8048380 <getuid@plt>
+0x804859a <main+14>             cmp    $0x1092,%eax
+0x804859f <main+19>             je     0x80485cb <main+63>
+man getuid
+
+get user identity
+
+cmp    $0x1092,%eax
+Compare UID with 0x1092 (4242 in exa)
+
+(gdb) break *0x804859a
+
+(gdb) print/u $eax
+
+$1 = 2013
+
+Change it with:
+(gdb) set var $eax=4242
+
+(gdb) continu
+
+your token is 2A31L79asukciNyi8uppkEuSx
